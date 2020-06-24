@@ -8,11 +8,11 @@ imgur = Imgur(CLIENT_ID)
 
 
 def resize_image(image, size):
-    im = Image.open("picture.png")
+    im = Image.open(image)
     im = im.resize(size, Image.ANTIALIAS)
-    im.save("picture.png")
+    im.save("output.png")
 
-    upload_image = imgur.upload_image("picture.png")
+    upload_image = imgur.upload_image("output.png")
 
     return upload_image
 
